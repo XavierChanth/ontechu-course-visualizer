@@ -7,7 +7,7 @@ const App = (props) => {
   return <Router>
     <Route component={Nav}/>
     <Switch>
-      <Route path="tree" component={Tree}/>
+      <Route path="/tree" component={Tree}/>
       <Route component={Table}/>
     </Switch>
   </Router>;
