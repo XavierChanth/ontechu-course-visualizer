@@ -1,40 +1,309 @@
 [
-  { "id": "csci1030", "creditHours": 3, "name": "Intro to CS", "prereqs": [], "coreqs": []},
-  { "id": "csci1060", "creditHours": 3, "name": "Programming Workshop I", "prereqs": [], "coreqs": []},
-  { "id": "csci1061", "creditHours": 3, "name": "Programming Workshop II", "prereqs": ["csci1060"], "coreqs": []},
-  { "id": "csci2000", "creditHours": 3, "name": "Scientific Data Analysis", "prereqs": [], "coreqs": []},
-  { "id": "csci2010", "creditHours": 3, "name": "Data Structures", "prereqs": [], "coreqs": []},
-  { "id": "csci2110", "creditHours": 3, "name": "Discrete Math for CS", "prereqs": [], "coreqs": []},
-  { "id": "csci2020", "creditHours": 3, "name": "Software Systems Dev. and Integration", "prereqs": [], "coreqs": []},
-  { "id": "csci2040", "creditHours": 3, "name": "Software Design and Analysis", "prereqs": [], "coreqs": []},
-  { "id": "csci2072", "creditHours": 3, "name": "Computational Science I", "prereqs": [], "coreqs": []},
-  { "id": "csci3070", "creditHours": 3, "name": "Analysis and Design of Algorithms", "prereqs": [], "coreqs": []},
-  { "id": "csci3010", "creditHours": 3, "name": "Simulation and Modelling", "prereqs": [], "coreqs": []},
-  { "id": "csci3030", "creditHours": 3, "name": "Database Systems and Concepts", "prereqs": [], "coreqs": []},
-  { "id": "csci3090", "creditHours": 3, "name": "Computer Graphics and Visualization", "prereqs": [], "coreqs": []},
-  { "id": "csci3230", "creditHours": 3, "name": "Web Application Development", "prereqs": [], "coreqs": []},
-  { "id": "csci3055", "creditHours": 3, "name": "Programming Languages", "prereqs": [], "coreqs": []},
-  { "id": "csci3060", "creditHours": 3, "name": "Software Quality Assurance", "prereqs": [], "coreqs": []},
-  { "id": "csci3020", "creditHours": 3, "name": "Operating Systems", "prereqs": [], "coreqs": []},
-  { "id": "csci3150", "creditHours": 3, "name": "Computer Networks", "prereqs": [], "coreqs": []},
-  { "id": "csci3310", "creditHours": 3, "name": "Systems Programming", "prereqs": [], "coreqs": []},
-  { "id": "csci4040", "creditHours": 3, "name": "Ethics, Law and the Social Impacts of Computing", "prereqs": [], "coreqs": []},
-  { "id": "csci4030", "creditHours": 3, "name": "Big Data Analytics", "prereqs": [], "coreqs": []},
-  { "id": "csci4050", "creditHours": 3, "name": "Machine Learning, Theory and Application", "prereqs": [], "coreqs": []},
-  { "id": "csci4610", "creditHours": 3, "name": "Artificial Intelligence", "prereqs": [], "coreqs": []},
-  { "id": "csci4110", "creditHours": 3, "name": "Advanced Computer Graphics", "prereqs": [], "coreqs": []},
-  { "id": "csci4210", "creditHours": 3, "name": "Information Visualization", "prereqs": [], "coreqs": []},
-  { "id": "csci4220", "creditHours": 3, "name": "Computer Vision", "prereqs": [], "coreqs": []},
-  { "id": "csci4100", "creditHours": 3, "name": "Mobile Devices", "prereqs": [], "coreqs": []},
-  { "id": "csci4160", "creditHours": 3, "name": "Interactive Media", "prereqs": [], "coreqs": []},
-  { "id": "csci4620", "creditHours": 3, "name": "Human-Computer Interaction", "prereqs": [], "coreqs": []},
-  { "id": "csci4020", "creditHours": 3, "name": "Compilers", "prereqs": [], "coreqs": []},
-  { "id": "csci4060", "creditHours": 3, "name": "Massively Parallel Programming", "prereqs": [], "coreqs": []},
-  { "id": "csci4310", "creditHours": 3, "name": "Advanced Operating Systems Project", "prereqs": [], "coreqs": []},
-  { "id": "csci4630", "creditHours": 3, "name": "High Performance Computing", "prereqs": [], "coreqs": []},
-  { "id": "csci4640", "creditHours": 3, "name": "Distributed Computing", "prereqs": [], "coreqs": []},
-  { "id": "csci4410", "creditHours": 3, "name": "Computer Science Thesis Project I **", "prereqs": [], "coreqs": []},
-  { "id": "csci4410", "creditHours": 3, "name": "Computer Science Thesis Project II **", "prereqs": [], "coreqs": []},
-  { "id": "", "creditHours": 3, "name": "", "prereqs": [], "coreqs": []},
-  { "id": "", "creditHours": 3, "name": "", "prereqs": [], "coreqs": []}
+  {
+    "id": "csci1030",
+    "creditHours": 3,
+    "name": "Intro to CS",
+    "restr": ["busi1830", "csci1020", "csci1600", "engr1200", "infr1100"]
+  },
+  {
+    "id": "csci1060",
+    "creditHours": 3,
+    "name": "Programming Workshop I",
+    "restr": ["csci2030"]
+  },
+  {
+    "id": "math1000",
+    "creditHours": 3,
+    "name": "Introductory Calculus",
+    "prereqs": { "hs": "MHF4U" },
+    "restr": ["busi1900", "math1010"]
+  },
+  {
+    "id": "math1010",
+    "creditHours": 3,
+    "name": "Calculus I",
+    "prereqs": { "hs": "MHF4U & MCV4U" },
+    "restr": ["busi1900", "math1000"]
+  },
+  {
+    "id": "phy1010",
+    "creditHours": 3,
+    "name": "Physics I",
+    "prereqs": { "hs": "MCV4U" },
+    "restr": ["phy1030", "phy1810"]
+  },
+  {
+    "id": "phy1030",
+    "creditHours": 3,
+    "name": "Introductory Physics",
+    "prereqs": { "hs": "MHF4U" },
+    "restr": ["phy1010", "phy1810"]
+  },
+  {
+    "id": "csci1061",
+    "creditHours": 3,
+    "name": "Programming Workshop II",
+    "prereqs": { "uni": "csci1060" }
+  },
+  {
+    "id": "csci2050",
+    "creditHours": 3,
+    "name": "Computer Architecture I",
+    "prereqs": {
+      "uni": [["csci1010", "csci1030"]]
+    }
+  },
+  {
+    "id": "math1020",
+    "creditHours": 3,
+    "name": "Calculus II",
+    "prereqs": { "uni": [["math1000", "math1010"]] }
+  },
+  {
+    "id": "phy1020",
+    "creditHours": 3,
+    "name": "Physics II",
+    "prereqs": { "uni": ["phy1010", ["phy1030", "math1000"]] },
+    "restr": ["phy1040", "phy1810"]
+  },
+  {
+    "id": "csci2000",
+    "creditHours": 3,
+    "name": "Scientific Data Analysis",
+    "prereqs": { "uni": [["csci1030", "csci1040"], "math1020"] }
+  },
+  {
+    "id": "csci2010",
+    "creditHours": 3,
+    "name": "Data Structures",
+    "prereqs": { "uni": [["csci1060", "csic1040"]] }
+  },
+  {
+    "id": "csci2110",
+    "creditHours": 3,
+    "name": "Discrete Math for Computer Scientists",
+    "prereqs": { "creditHours": 24 },
+    "restr": ["csci1010", "elee2110", "math2080"]
+  },
+  {
+    "id": "stat2010",
+    "creditHours": 3,
+    "name": "Statistics and Probability for Physical Science",
+    "prereqs": { "uni": "math1020" },
+    "restr": ["busi1450", "hlsc3800", "ssci2910", "stat2020", "stat2800"]
+  },
+  {
+    "id": "csci2020",
+    "creditHours": 3,
+    "name": "Software Systems Dev. and Integration",
+    "prereqs": { "uni": "csci2010" }
+  },
+  {
+    "id": "csci2040",
+    "creditHours": 3,
+    "name": "Software Design and Analysis",
+    "coreqs": { "uni": "csci2020" },
+    "restr": ["csci3040"]
+  },
+  {
+    "id": "csci2072",
+    "creditHours": 3,
+    "name": "Computational Science I",
+    "prereqs": { "uni": ["csci2000", "math1020"] },
+    "coreqs": { "uni": [["math1850", "math2050"]] },
+    "restr": ["math2070", "math2072"]
+  },
+  {
+    "id": "math2050",
+    "creditHours": 3,
+    "name": "Linear Algebra",
+    "coreqs": { "uni": [["math1010"]] },
+    "restr": ["busi1900", "math1850"]
+  },
+  {
+    "id": "csci3070",
+    "creditHours": 3,
+    "name": "Analysis and Design of Algorithms",
+    "prereqs": { "uni": ["csci2010", "csci2110"] },
+    "restr": ["sofe3770"]
+  },
+  {
+    "id": "csci3010",
+    "creditHours": 3,
+    "name": "Simulation and Modelling",
+    "prereqs": {
+      "uni": [["csci1020", "csci1030"], ["csci2072", "math2072"], "stat2010"]
+    }
+  },
+  {
+    "id": "csci3030",
+    "creditHours": 3,
+    "name": "Database Systems and Concepts",
+    "prereqs": { "uni": ["csci2010", "csci2020"] },
+    "coreqs": {},
+    "restr": ["sofe3770"]
+  },
+  {
+    "id": "csci3090",
+    "creditHours": 3,
+    "name": "Computer Graphics and Visualization",
+    "prereqs": { "uni": ["csci2010", ["math1850,", "math2050"]] },
+    "coreqs": {},
+    "restr": ["engr4860", "sofe4860"]
+  },
+  {
+    "id": "csci3230",
+    "creditHours": 3,
+    "name": "Web Application Development",
+    "prereqs": { "creditHours": 53, "uni": [["csci1030", "csci1040"]] }
+  },
+  {
+    "id": "csci3055",
+    "creditHours": 3,
+    "name": "Programming Languages",
+    "prereqs": { "uni": ["csci2110", ["csci1060", "csci2030"]] }
+  },
+  {
+    "id": "csci3060",
+    "creditHours": 3,
+    "name": "Software Quality Assurance",
+    "prereqs": { "uni": ["csci2020", ["csci2040", "csci3040"]] },
+    "restr": ["sofe3980"]
+  },
+  {
+    "id": "csci3020",
+    "creditHours": 3,
+    "name": "Operating Systems",
+    "prereqs": { "uni": ["csci2010", "csci2050"] },
+    "restr": ["sofe3950"]
+  },
+  {
+    "id": "csci3150",
+    "creditHours": 3,
+    "name": "Computer Networks",
+    "prereqs": { "uni": "csci2050" },
+    "restr": ["sofe3850", "engr4650"]
+  },
+  {
+    "id": "csci3310",
+    "creditHours": 3,
+    "name": "Systems Programming",
+    "prereqs": { "uni": ["csci2020", "csci2050"] },
+    "restr": ["csci3020", "csci3150"]
+  },
+  {
+    "id": "csci4040",
+    "creditHours": 3,
+    "name": "Ethics, Law and the Social Impacts of Computing",
+    "prereqs": { "yearsComplete": 2 }
+  },
+  {
+    "id": "csci4030",
+    "creditHours": 3,
+    "name": "Big Data Analytics",
+    "prereqs": { "uni": ["stat2010", "csci3030"] }
+  },
+  {
+    "id": "csci4050",
+    "creditHours": 3,
+    "name": "Machine Learning, Theory and Application",
+    "prereqs": { "uni": ["csci3070", "math2050"] },
+    "restr": ["csci4610", "infr4320", "sofe3720"]
+  },
+  {
+    "id": "csci4610",
+    "creditHours": 3,
+    "name": "Artificial Intelligence",
+    "prereqs": { "uni": ["stat2010", "csci3070"] },
+    "restr": ["sofe3720"]
+  },
+  {
+    "id": "csci4110",
+    "creditHours": 3,
+    "name": "Advanced Computer Graphics",
+    "prereqs": { "uni": "csci3090" }
+  },
+  {
+    "id": "csci4210",
+    "creditHours": 3,
+    "name": "Information Visualization",
+    "prereqs": { "uni": "csci3030" }
+  },
+  {
+    "id": "csci4220",
+    "creditHours": 3,
+    "name": "Computer Vision",
+    "prereqs": { "uni": ["csci2010", "math2050"] }
+  },
+  {
+    "id": "csci4100",
+    "creditHours": 3,
+    "name": "Mobile Devices",
+    "prereqs": { "uni": "csci2020" }
+  },
+  {
+    "id": "csci4160",
+    "creditHours": 3,
+    "name": "Interactive Media",
+    "prereqs": { "uni": ["csci2160", "csci3090"] }
+  },
+  {
+    "id": "csci4620",
+    "creditHours": 3,
+    "name": "Human-Computer Interaction",
+    "prereqs": { "uni": [["csci2040", "csci3040"]] },
+    "restr": ["engr4850", "sofe4850"]
+  },
+  {
+    "id": "csci4020",
+    "creditHours": 3,
+    "name": "Compilers",
+    "prereqs": { "uni": "csci2050" },
+    "restr": ["sofe3960"]
+  },
+  {
+    "id": "csci4060",
+    "creditHours": 3,
+    "name": "Massively Parallel Programming",
+    "prereqs": { "uni": "csci3070" }
+  },
+  {
+    "id": "csci4310",
+    "creditHours": 3,
+    "name": "Advanced Operating Systems Project",
+    "prereqs": { "uni": [["csic3020", "csci3310"]] }
+  },
+  {
+    "id": "csci4630",
+    "creditHours": 3,
+    "name": "High Performance Computing",
+    "prereqs": { "uni": ["csci3010", "csci3020"] }
+  },
+  {
+    "id": "csci4640",
+    "creditHours": 3,
+    "name": "Distributed Computing",
+    "prereqs": { "uni": ["csci3020", "csci3030", "csci3070"] },
+    "restr": ["sofe4790"]
+  },
+  {
+    "id": "csci4410",
+    "creditHours": 3,
+    "name": "Computer Science Thesis Project I **",
+    "prereqs": { "creditHours":90 }
+  },
+  {
+    "id": "csci4420",
+    "creditHours": 3,
+    "name": "Computer Science Thesis Project II **",
+    "prereqs": { "uni": "csci4410" }
+  },
+  {
+    "id": "elec",
+    "creditHours": 3,
+    "name": "Elective",
+    "prereqs": { "uni": [] },
+    "coreqs": {},
+    "restr": []
+  }
 ]
